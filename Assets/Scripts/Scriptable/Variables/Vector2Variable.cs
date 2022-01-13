@@ -4,7 +4,7 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Variables/New Vector2 Variable")]
 public class Vector2Variable : ScriptableObject 
 {
-    public UnityAction OnValueChanged;
+    public UnityAction<Vector2> OnValueChanged;
     public Vector2 value;
     public bool resetOnDisable;
 
@@ -19,8 +19,8 @@ public class Vector2Variable : ScriptableObject
         get { return value; }
         set
         {
-            OnValueChanged?.Invoke();
             this.value = value;
+            OnValueChanged?.Invoke(this.value);
         }
     }
 }

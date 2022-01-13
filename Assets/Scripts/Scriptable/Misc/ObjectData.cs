@@ -25,7 +25,7 @@ public class ObjectData : ScriptableObject
     [SerializeField] string numberOfMoons;
     [SerializeField] string hasRingSystem;
     [SerializeField] string hasGlobalMagneticField;
-    [TextArea(1, 10)] [SerializeField] string facts;
+    [TextArea(1, 40)] [SerializeField] string facts;
     [SerializeField] bool isPlanet;
     string data = "";
 

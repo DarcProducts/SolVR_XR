@@ -14,7 +14,8 @@ public class SolSystem : MonoBehaviour
 
     [SerializeField] BoolVariable isRotating;
     [SerializeField] GameObject sun;
-    [SerializeField] FontAssetVariable font;
+    [SerializeField] TMP_FontAsset font;
+    [SerializeField] Color fontColor;
     [SerializeField] TMP_Text sunLabel;
     [SerializeField] GameObject[] planets;
     [SerializeField] GameObject[] planetTargets;
@@ -48,7 +49,8 @@ public class SolSystem : MonoBehaviour
         ShutOffLines();
         if (sunLabel != null)
             sunLabel.gameObject.SetActive(false);
-        sunLabel.font = font.font;
+        sunLabel.font = font;
+        sunLabel.color = fontColor;
     }
 
     void FixedUpdate()
@@ -149,7 +151,14 @@ public class SolSystem : MonoBehaviour
                 }
 
                 if (planets[i] != null)
+                {
                     planets[i].transform.position = planets[i].transform.parent.position;
+                    // <--------------------- this sets collider to be the size of the created sphere models
+                    SphereCollider pCol = planets[i].GetComponent<SphereCollider>();
+                    if (pCol != null)
+                        pCol.radius = .5f;
+                    // <--------------------- this sets collider to be the size of the created sphere models
+                }
 
                 if (i < planetTargets.Length)
                     if (planetTargets[i] != null)
@@ -200,7 +209,8 @@ public class SolSystem : MonoBehaviour
                 {
                     if (planets[i] != null && planetLabels[i] != null && planetTilts[i] != null)
                     {
-                        planetLabels[i].font = font.font;
+                        planetLabels[i].font = font;
+                        planetLabels[i].color = fontColor;
                         planetLabels[i].transform.position = planetTilts[i] + Vector3.up * planetLabelDistance;
                         planetLabels[i].fontSize = planetLabelFontSize;
                         planetLabels[i].text = planets[i].name;

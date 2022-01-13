@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0027012436, g: 0.002469319, b: 0.0028830348, a: 1}
+  m_IndirectSpecularColor: {r: 0.022778325, g: 0.021180645, b: 0.02384743, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 8}
+  m_SizeDelta: {x: 6, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27963773
 MonoBehaviour:
@@ -328,7 +328,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 8}
+  m_SizeDelta: {x: 6, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29855449
 MonoBehaviour:
@@ -696,7 +696,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6c63082b0f2f15546910c74ac13d39ba, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.1254902, g: 0.6039216, b: 0.7058824, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11395,8 +11395,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11420,10 +11420,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -11484,7 +11484,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11554,6 +11554,7 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 200
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 256
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
@@ -11570,11 +11571,12 @@ MonoBehaviour:
   moonDistanceFromPlanet: []
   moonMaterials: []
   objectData: []
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 0
@@ -11666,8 +11668,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11691,10 +11693,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -11755,7 +11757,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11836,8 +11838,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11861,10 +11863,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -11925,7 +11927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16877,8 +16879,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 1}
-      key1: {r: 1, g: 0, b: 0, a: 1}
+      key0: {r: 0.1254902, g: 0.6039216, b: 0.7058824, a: 1}
+      key1: {r: 0.1254902, g: 0.6039216, b: 0.7058824, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -16886,7 +16888,7 @@ LineRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 964
+      ctime1: 65535
       ctime2: 0
       ctime3: 0
       ctime4: 0
@@ -16959,6 +16961,7 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 0
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 0
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
@@ -16975,11 +16978,12 @@ MonoBehaviour:
   moonDistanceFromPlanet: []
   moonMaterials: []
   objectData: []
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 1
@@ -17162,6 +17166,7 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 200
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 256
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
@@ -17178,11 +17183,12 @@ MonoBehaviour:
   moonDistanceFromPlanet: []
   moonMaterials: []
   objectData: []
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 0
@@ -17283,7 +17289,8 @@ MonoBehaviour:
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   sun: {fileID: 665998584}
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   sunLabel: {fileID: 1026439058}
   planets:
   - {fileID: 5498157638929527422}
@@ -17688,9 +17695,9 @@ MonoBehaviour:
   - {fileID: 2038902418}
   - {fileID: 272418707}
   - {fileID: 1968255495}
-  font: {fileID: 11400000, guid: 4341d390d61c00744939b22b76010fd1, type: 2}
+  font: {fileID: 11400000, guid: 37fc699eace4c2540ba4663fd0fd5ca6, type: 2}
+  fontColor: {r: 1, g: 1, b: 1, a: 1}
   dataPanelText: {fileID: 1530566703}
-  dataTextDelay: 0.05
   infoDataPanel1: "Mass (1024kg or 1021tons) - This is the mass of the planet in
     septillion (1 followed by 24 zeros) kilograms or sextillion (1 followed by 21
     zeros) tons. Strictly speaking tons are measures of weight, not mass, but are
@@ -17757,7 +17764,6 @@ MonoBehaviour:
     localized regional magnetic fields but no global field."
   infoPanel2Text: {fileID: 1113034064}
   factsText: {fileID: 27963773}
-  factTextDelay: 0.01
 --- !u!1 &901307168
 GameObject:
   m_ObjectHideFlags: 0
@@ -18101,8 +18107,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18126,10 +18132,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -18190,7 +18196,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18702,7 +18708,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 8}
+  m_SizeDelta: {x: 6, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113034064
 MonoBehaviour:
@@ -18918,6 +18924,7 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 32
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 256
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
@@ -18994,11 +19001,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   objectData: []
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 0
@@ -19104,8 +19112,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19129,10 +19137,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -19193,7 +19201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19302,6 +19310,7 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 300
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 256
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
@@ -19836,7 +19845,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 165.67}
   - {x: 0, y: 0, z: 155.18}
   - {x: 0, y: 0, z: 163.83}
-  - {x: 0, y: 0, z: 163.53}
+  - {x: 0, y: 180, z: 163.53}
   - {x: 0, y: 0, z: 167.73}
   - {x: 0, y: 0, z: 162.83}
   - {x: 0, y: 0, z: 163.48}
@@ -19850,7 +19859,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 166.07}
   - {x: 0, y: 0, z: 150.28}
   - {x: 0, y: 0, z: 166.55}
-  - {x: 0, y: 0, z: 166.89}
+  - {x: 0, y: 0, z: -166.89}
   - {x: 0, y: 0, z: 154.67}
   - {x: 0, y: 0, z: 166.17}
   - {x: 0, y: 0, z: 167.72}
@@ -20187,11 +20196,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 0
@@ -20273,6 +20283,7 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 42
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 256
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
@@ -20311,11 +20322,12 @@ MonoBehaviour:
   objectData:
   - {fileID: 0}
   - {fileID: 0}
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 1
@@ -20475,8 +20487,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20500,10 +20512,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -20564,7 +20576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21144,7 +21156,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 8}
+  m_SizeDelta: {x: 6, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530566703
 MonoBehaviour:
@@ -21200,7 +21212,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 32
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -21337,6 +21349,7 @@ GameObject:
   - component: {fileID: 1566874961}
   - component: {fileID: 1566874960}
   - component: {fileID: 1566874964}
+  - component: {fileID: 1566874966}
   - component: {fileID: 1566874962}
   - component: {fileID: 1566874963}
   - component: {fileID: 1566874965}
@@ -21466,6 +21479,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 229360
   unableToLaunch: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
+--- !u!114 &1566874966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566874959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d622a3523d7f6443b09ca1ceccebaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateThumbstickValues: {fileID: 11400000, guid: f7afe4878678f0e42b2b1bacb25029ac, type: 2}
+  playerRotateSpeed: {fileID: 11400000, guid: 0cc59f139c7446f40b832683f7522f02, type: 2}
+  playerRig: {fileID: 1566874961}
 --- !u!1 &1588496229
 GameObject:
   m_ObjectHideFlags: 0
@@ -21675,8 +21703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21700,10 +21728,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -21764,7 +21792,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21877,8 +21905,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21902,10 +21930,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -21966,7 +21994,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22206,6 +22234,7 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 42
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 256
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
@@ -22233,11 +22262,12 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 824670eea16c752408d8f9802dab85ff, type: 2}
   objectData:
   - {fileID: 11400000, guid: 8c88f8a06010ec841bebf38a08b096aa, type: 2}
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 0
@@ -22680,11 +22710,12 @@ MonoBehaviour:
   OrbitLinesDeactivated: {fileID: 11400000, guid: 22f1e8d0e041d364a8e855e424569f00, type: 2}
   disableLineDistance: 300
   playerTransform: {fileID: 1566874961}
+  distanceToTurnOff: 256
   isOrbiting: {fileID: 11400000, guid: e3fd7a1392022d9429a98bc83b2e9383, type: 2}
   isRotating: {fileID: 11400000, guid: d6babca01ec4abb4a84f93bfe898cbb7, type: 2}
   unableToDisable: {fileID: 11400000, guid: bfc4c903fb59c1b4ba83e12830bbeb69, type: 2}
   planet: {fileID: 4572307984291271702}
-  moonDefaultMat: {fileID: 2100000, guid: 85aeeb567ae3abf41b4a7fa61e02763e, type: 2}
+  moonDefaultMat: {fileID: 2100000, guid: 06d64ba7ead6ef240a8739d72a08a117, type: 2}
   moonNames: []
   moonScales: []
   moonTilts: []
@@ -22696,11 +22727,12 @@ MonoBehaviour:
   moonDistanceFromPlanet: []
   moonMaterials: []
   objectData: []
-  font: {fileID: 11400000, guid: 0bb192dd1e8bdad45acff0982b099871, type: 2}
+  font: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  fontColor: {r: 0.6627451, g: 0.6627451, b: 0.6627451, a: 1}
   moonLabelDistance: {fileID: 11400000, guid: ac770249461954943acc5204343034f7, type: 2}
   moonOrbitLineWidth: {fileID: 11400000, guid: befe35b8906b0d94b9210c368e277a20, type: 2}
   moonLabelFontSize: {fileID: 11400000, guid: 7c1fcb24af610264bafa977d4bc829fb, type: 2}
-  orbitLineMaterial: {fileID: 11400000, guid: 8737dfe4f1aede2498d273044a40efef, type: 2}
+  orbitLineMaterial: {fileID: 2100000, guid: bae1457a12dc8a04591dcb4551013d13, type: 2}
   labelLineShowDelay: 0.4
   labelLineHideDelay: 0.06
   hasAsteroidRingSystem: 0
@@ -22797,7 +22829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackingType: 0
-  m_UpdateType: 0
+  m_UpdateType: 1
   m_PositionAction:
     m_Name: Main Camera - TPD - Position
     m_Type: 0
@@ -28414,8 +28446,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
-  m_sharedMaterial: {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
+  m_sharedMaterial: {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28439,10 +28471,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -28503,7 +28535,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4462516083349746076, guid: 203c49b4bfa11c74a8a99f686750691e, type: 2}
+  - {fileID: 3156323419798362864, guid: 08f6278fe6bd6f040add1aba9f339a23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29095,7 +29127,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6640092300325732000}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

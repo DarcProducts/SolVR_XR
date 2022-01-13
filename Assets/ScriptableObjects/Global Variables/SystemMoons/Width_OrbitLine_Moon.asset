@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b29d32b4dbdbbe4c8bd00e3f73b8586, type: 3}
   m_Name: Width_OrbitLine_Moon
   m_EditorClassIdentifier: 
-  value: 0.04
+  value: 0.05
   resetOnDisable: 0

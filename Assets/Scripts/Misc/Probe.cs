@@ -15,18 +15,18 @@ public class Probe : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        ExitSystem exit = collision.gameObject.GetComponent<ExitSystem>();
-        PlanetSystem system = null;
-        DataHolder data = collision.gameObject.GetComponent<DataHolder>();
-        if (exit != null)
-            system = exit.GetPlanetSystem();
-        if (system != null)
-            system.ActivateLines();
-        if (exit != null && system != null && data != null)
-        { 
-            dataPanels.ActivatePanels();
-            dataPanels.StreamData(data.GetObjectData());
-            dataPanels.StreamFacts(data.GetObjectFacts());
+        if (collision.gameObject.TryGetComponent<ExitSystem>(out ExitSystem exit))
+        {
+            PlanetSystem system = exit.GetPlanetSystem();
+            if (system != null)         
+                system.ActivateLines();
+            if (exit.TryGetComponent<DataHolder>(out DataHolder data))
+            {
+                dataPanels.ActivatePanels();
+                dataPanels.StreamData(data.GetObjectData());
+                dataPanels.StreamFacts(data.GetObjectFacts());
+                dataPanels.StreamInfo();
+            }
         }
         launcher.DisableProbe();
     }

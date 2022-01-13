@@ -1,30 +1,28 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class SystemCreator : MonoBehaviour
 {
-    [SerializeField] GameObject parentSystem;
-    [SerializeField] GameObject celestialSystem;
-    [SerializeField] GameObject celestialOrbitTargets;
-    [SerializeField] GameObject celesialTilts;
-    [SerializeField] GameObject celestialOrbitLines;
-    [SerializeField] GameObject celestialLabels;
-    List<GameObject> createdMoons = new List<GameObject>();
-    List<GameObject> createdTilts = new List<GameObject>();
-    List<GameObject> createdTargets = new List<GameObject>();
-    List<GameObject> createdOrbitObjects = new List<GameObject>();
-    List<GameObject> createdOrbitTiltObjects = new List<GameObject>();
-    List<GameObject> createdLabels = new List<GameObject>();
-    List<GameObject> createdOrbitLines = new List<GameObject>();
-
+    [SerializeField] private GameObject parentSystem;
+    [SerializeField] private GameObject celestialSystem;
+    [SerializeField] private GameObject celestialOrbitTargets;
+    [SerializeField] private GameObject celesialTilts;
+    [SerializeField] private GameObject celestialOrbitLines;
+    [SerializeField] private GameObject celestialLabels;
+    private List<GameObject> createdMoons = new List<GameObject>();
+    private List<GameObject> createdTilts = new List<GameObject>();
+    private List<GameObject> createdTargets = new List<GameObject>();
+    private List<GameObject> createdOrbitObjects = new List<GameObject>();
+    private List<GameObject> createdOrbitTiltObjects = new List<GameObject>();
+    private List<GameObject> createdLabels = new List<GameObject>();
+    private List<GameObject> createdOrbitLines = new List<GameObject>();
 
     public GameObject GetSystem(string planetName, string[] moonNames)
     {
-        if (celestialSystem != null && celesialTilts != null && celestialOrbitLines != null && celestialLabels != null && celestialOrbitTargets != null && parentSystem != null) 
+        if (celestialSystem != null && celesialTilts != null && celestialOrbitLines != null && celestialLabels != null && celestialOrbitTargets != null && parentSystem != null)
         {
-            Debug.Log($"Trying to start system....");
+            Debug.Log($"{this.gameObject.name} Started!");
             GameObject newSystem = Instantiate(celestialSystem, Vector3.zero, Quaternion.identity, parentSystem.transform);
             newSystem.name = $"{planetName} System";
             GameObject child1 = newSystem.transform.GetChild(0).gameObject;
@@ -55,7 +53,7 @@ public class SystemCreator : MonoBehaviour
 
                 GameObject newSystemTargets = Instantiate(celestialOrbitTargets, Vector3.zero, Quaternion.identity, child4.transform);
                 newSystemTargets.name = $"{moonNames[i]} Orbit Target";
-               
+
                 GameObject tChild1 = newSystemTargets.transform.GetChild(0).gameObject;
                 if (tChild1 != null)
                 {
@@ -89,10 +87,15 @@ public class SystemCreator : MonoBehaviour
     }
 
     public GameObject[] GetCreatedMoons() => createdMoons.ToArray();
+
     public GameObject[] GetCreatedTilts() => createdTilts.ToArray();
+
     public GameObject[] GetCreatedTargets() => createdTargets.ToArray();
+
     public GameObject[] GetCreatedOrbitObjects() => createdOrbitObjects.ToArray();
+
     public GameObject[] GetCreatedOrbitTiltObjects() => createdOrbitTiltObjects.ToArray();
+
     public TMP_Text[] GetCreatedLabels()
     {
         List<TMP_Text> convert = new List<TMP_Text>();
@@ -100,6 +103,7 @@ public class SystemCreator : MonoBehaviour
             convert.Add(createdLabels[i].GetComponent<TMP_Text>());
         return convert.ToArray();
     }
+
     public LineRenderer[] GetCreatedOrbitLines()
     {
         List<LineRenderer> convert = new List<LineRenderer>();

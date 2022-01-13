@@ -1,4 +1,3 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -16,37 +15,41 @@ public class DataPanelController : MonoBehaviour
     [SerializeField] FloatVariable panelRotateSpeed;
     [SerializeField] GameObject panelParent;
     [SerializeField] Panel[] panels = new Panel[4];
-    [SerializeField] FontAssetVariable font;
+    [SerializeField] TMP_FontAsset font;
+    [SerializeField] Color fontColor;
+
     [Header("Data Panel")]
     [SerializeField] TMP_Text dataPanelText;
-    [SerializeField] float dataTextDelay;
+
     [Header("Info Panel 1")]
     [TextArea(1, 10)] [SerializeField] string infoDataPanel1;
+
     [SerializeField] TMP_Text infoPanel1Text;
+
     [Header("Info Panel 2")]
     [TextArea(1, 10)] [SerializeField] string infoDataPanel2;
+
     [SerializeField] TMP_Text infoPanel2Text;
+
     [Header("Facts Panel")]
     [SerializeField] TMP_Text factsText;
-    [SerializeField] float factTextDelay;
+
     bool panelsActive = false;
 
-    void OnEnable()
-    {
-        deactivatePanels.ValuedChangeTrue += DeactivatePanels;
-    }
+    void OnEnable() => deactivatePanels.ValuedChangeTrue += DeactivatePanels;
 
-    void OnDisable()
-    {
-        deactivatePanels.ValuedChangeTrue -= DeactivatePanels;
-    }
+    void OnDisable() => deactivatePanels.ValuedChangeTrue -= DeactivatePanels;
 
     void Start()
     {
-        dataPanelText.font = font.font;
-        factsText.font = font.font;
-        infoPanel1Text.font = font.font;
-        infoPanel2Text.font = font.font;
+        dataPanelText.font = font;
+        dataPanelText.color = fontColor;
+        factsText.font = font;
+        factsText.color = fontColor;
+        infoPanel1Text.font = font;
+        infoPanel1Text.color = fontColor;
+        infoPanel2Text.font = font;
+        infoPanel2Text.color = fontColor;
         DeactivatePanels();
     }
 
@@ -59,53 +62,27 @@ public class DataPanelController : MonoBehaviour
         }
     }
 
-    public void StreamData(string data)
-    {
-        StartCoroutine(ShowText(data));
-        InsertInfo();
-    }
+    public void StreamData(string data) => InsertText(data, dataPanelText);
 
-    IEnumerator ShowText(string text)
-    {
-        dataPanelText.text = "";
-        foreach (char c in text)
-        {
-            dataPanelText.text += c;
-            yield return new WaitForSeconds(dataTextDelay);
-        }
-    }
+    public void StreamInfo() => InsertInfo();
 
-    public void StreamFacts(string text) => StartCoroutine(ShowFacts(text));
-
-    IEnumerator ShowFacts(string text)
-    {
-        factsText.text = "";
-        foreach (char c in text)
-        {
-            factsText.text += c;
-            yield return new WaitForSeconds(factTextDelay);
-        }
-    }
+    public void StreamFacts(string text) => InsertText(text, factsText);
 
     void InsertInfo()
     {
-        StartCoroutine(ShowInfo(infoPanel1Text, infoDataPanel1));
-        StartCoroutine(ShowInfo(infoPanel2Text, infoDataPanel2));
+        InsertText(infoDataPanel1, infoPanel1Text);
+        InsertText(infoDataPanel2, infoPanel2Text);
     }
 
-    IEnumerator ShowInfo(TMP_Text text, string data)
+    void InsertText(string text, TMP_Text textObj)
     {
-        text.text = "";
-        foreach (char c in data)
-        {
-            text.text += c;
-            yield return null;
-        }
+        textObj.text = "";
+        foreach (char c in text)
+            textObj.text += c;
     }
-    
+
     void DeactivatePanels()
     {
-        StopAllCoroutines();
         for (int i = 0; i < panels.Length; i++)
             panels[i].gameObject.SetActive(false);
         panelsActive = false;
@@ -144,4 +121,3 @@ public class DataPanelController : MonoBehaviour
         }
     }
 }
-

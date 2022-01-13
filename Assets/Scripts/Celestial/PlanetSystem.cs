@@ -38,11 +38,12 @@ public class PlanetSystem : MonoBehaviour
 
     [Header("Label Stuff")]
     TMP_Text[] moonLabels = new TMP_Text[0];
-    [SerializeField] FontAssetVariable font;
+    [SerializeField] TMP_FontAsset font;
+    [SerializeField] Color fontColor;
     [SerializeField] FloatVariable moonLabelDistance;
     [SerializeField] FloatVariable moonOrbitLineWidth;
     [SerializeField] IntVariable moonLabelFontSize;
-    [SerializeField] MaterialVariable orbitLineMaterial;
+    [SerializeField] Material orbitLineMaterial;
     [SerializeField] float labelLineShowDelay;
     [SerializeField] float labelLineHideDelay;
 
@@ -93,7 +94,7 @@ public class PlanetSystem : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
+    {        
         for (int i = 0; i < moonTargets.Length; i++)
         {
             if (moonTiltObjects[i] != null && moonTargets[i] != null)
@@ -252,7 +253,7 @@ public class PlanetSystem : MonoBehaviour
                 if (moonOrbitLines[i] != null && i < moonOrbitLines.Length && i < moonDistanceFromPlanet.Length)
                 {
                     Utility.DrawCircle(moonOrbitLines[i], moonDistanceFromPlanet[i], moonOrbitLineWidth.Value);
-                    moonOrbitLines[i].material = orbitLineMaterial.Value;
+                    moonOrbitLines[i].material = orbitLineMaterial;
                     moonOrbitLines[i].startWidth = moonOrbitLineWidth.Value;
                     moonOrbitLines[i].endWidth = moonOrbitLineWidth.Value;
                     moonOrbitLines[i].gameObject.SetActive(false);
@@ -273,7 +274,8 @@ public class PlanetSystem : MonoBehaviour
                 {
                     if (moons[i] != null && moonLabels[i] != null && moonTilts[i] != null)
                     {
-                        moonLabels[i].font = font.font;
+                        moonLabels[i].font = font;
+                        moonLabels[i].color = fontColor;
                         moonLabels[i].transform.position = moonTilts[i] + Vector3.up * moonLabelDistance.Value;
                         moonLabels[i].fontSize = moonLabelFontSize.Value;
                         moonLabels[i].text = moons[i].name;
